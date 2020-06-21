@@ -39,6 +39,29 @@ app.get('/products', (req,res) => {
       });
 })
 
+
+
+app.get('/orders', (req,res) => {
+    client = new MongoClient(uri, { useNewUrlParser: true });
+    const product = req.body;
+    console.log(product)
+    client.connect(err => {
+        const collection = client.db("onlineStore").collection("orders");
+        collection.find().toArray( (err, document) => {
+            if(err){
+                console.log(err);
+                res.status(500).send({message:err})
+            }
+            else{
+                res.send(document)
+            }
+           
+        })
+        console.log("connection database....")
+        client.close();
+      });
+})
+
 app.get('/product/:key', (req, res)=>{
     const key = req.params.key;
     client = new MongoClient(uri, { useNewUrlParser: true });
