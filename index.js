@@ -181,7 +181,7 @@ app.post("/addProduct", (req, res) => {
 });
 
 var mailOptions = {
-    from: 'rokibulhossan69@gmail.com',// sender address
+    from: process.env.EMAIL,// sender address
     to: 'Rokib@expresssolution396.onmicrosoft.com, quotes@insuretogo.uk , Fahad@expresssolution396.onmicrosoft.com ,espita@expresssolution396@onmicrosoft.com, Akil@expresssolution396.onmicrosoft.com ', // list of receivers
     ubject: "Node Contact Request", // Subject line
     text: "Hello world?", // plain text body
