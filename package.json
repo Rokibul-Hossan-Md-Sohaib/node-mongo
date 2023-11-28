@@ -16,6 +16,8 @@
     "express": "^4.17.1",
     "mongodb": "^3.5.9",
     "nodemailer": "^6.7.8",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sslcommerz": "^1.7.0",
+    "sslcommerz-lts": "^1.1.0"
   }
 }
